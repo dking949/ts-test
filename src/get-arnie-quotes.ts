@@ -1,6 +1,9 @@
 import { httpGet } from "./mock-http-interface";
 
 type TResult = {
+  // I am aware this means that both keys could be present. I did try to make it one or the other using
+  // [key in "Arnie Quote" | "FAILURE"]: string;
+  // However that didn't work. I then saw the solution in a closed PR on the repo.
   "Arnie Quote"?: string;
   FAILURE?: string;
 };
